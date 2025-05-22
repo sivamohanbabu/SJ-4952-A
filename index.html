@@ -4,13 +4,19 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Sailor Bootstrap Template</title>
+  <title>Sattjiva</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+  <style>
+    .logo-img {
+  height: 3rem; /* or whatever size you need */
+  width: auto;
+}
+
+  </style>
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/sattjiva-logo.png" rel="icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -41,41 +47,50 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Sailor</h1>
-      </a>
+
+
+
+<a href="index.html" class="logo d-flex align-items-center me-auto">
+  <img src="assets/img/sattjiva-logo.png" alt="Sattjiva Logo" class="logo-img">
+  <h1 class="sitename">Sattjiva</h1>
+</a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
-          <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="about.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li><a href="team.html">Yoga</a></li>
+              <li><a href="testimonials.html">Meditation</a></li>
+              <li class="dropdown"><a href="#"><span></span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
+                  <li><a href="#">Mindfulness Meditation</a></li>
+                  <li><a href="#">Guided Meditation</a></li>
+                  <li><a href="#">Transcendental Meditation</a></li>
+                  <li><a href="#">Mantra Meditation</a></li>
+                  <li><a href="#">Loving-Kindness (Metta)</a></li>
+                  <li><a href="#">Chakra Meditation</a></li>
+                  <li><a href="#">Vipassana Meditation</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <!-- <li><a href="services.html">Resources</a></li> -->
+           <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+    <li><a class="dropdown-item" href="free-resources.html">Free</a></li>
+    <li><a class="dropdown-item" href="paid-resources.html">Paid</a></li>
+  </ul>
+</li>
+
+          <li><a href="portfolio.html">Feature of AI</a></li>
+          <li><a href="pricing.html">Maths at one Place</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a class="btn-getstarted" href="about.html">Get Started</a>
-
     </div>
   </header>
 
@@ -87,31 +102,17 @@
       <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
         <div class="carousel-item active">
-          <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
+          <img src="assets/img/hero-carousel/yoga.jpeg" alt="">
           <div class="carousel-container">
-            <h2>Welcome to Sailor<br></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <a href="#featured-services" class="btn-get-started">Get Started</a>
+            <h2>Welcome to Sattjiva<br></h2>
+            <p>
+Yoga and meditation are ancient practices that nurture both the body and mind, offering a holistic path to wellness and inner peace. Through gentle movement and mindful breathing, yoga strengthens and stretches the body, improving flexibility, posture, and overall vitality. It helps release physical tension and restores balance to the nervous system, creating a deep sense of calm. Meditation complements this by quieting the restless mind, allowing us to step away from daily stress and mental clutter. Regular meditation cultivates emotional stability, enhances focus, and fosters a profound connection with ourselves and the world around us. Together, yoga and meditation guide us toward harmony—connecting body, breath, and spirit—helping us feel more alive, centered, and deeply fulfilled in every aspect of life.
+            </p>
+            <a href="#featured-services" class="btn-get-started">Explore it</a>
           </div>
         </div><!-- End Carousel Item -->
 
-        <div class="carousel-item">
-          <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="">
-          <div class="carousel-container">
-            <h2>At vero eos et accusamus</h2>
-            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
-            <a href="#featured-services" class="btn-get-started">Get Started</a>
-          </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item">
-          <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="">
-          <div class="carousel-container">
-            <h2>Temporibus autem quibusdam</h2>
-            <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
-            <a href="#featured-services" class="btn-get-started">Get Started</a>
-          </div>
-        </div><!-- End Carousel Item -->
+       
 
         <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
