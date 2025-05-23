@@ -26,14 +26,25 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+  .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+}
 
-  <!-- =======================================================
-  * Template Name: Sailor
-  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+</style>
 </head>
 
 <body class="team-page">
@@ -47,12 +58,12 @@
 </a>
 <nav id="navmenu" class="navmenu">
   <ul>
-    <li><a href="#hero" class="active">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
 
     <li class="dropdown">
       <a href="about.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
       <ul>
-        <li><a href="team.html">Yoga</a></li>
+        <li><a href="yoga.html">Yoga</a></li>
         <li><a href="testimonials.html">Vedic Knowledge</a></li>
         <li class="dropdown">
           <a href="#"><span>Meditation</span> <i class="bi bi-chevron-right toggle-dropdown"></i></a>
@@ -69,17 +80,14 @@
       </ul>
     </li>
 
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Resources
-      </a>
+   <li class="dropdown">
+      <a href="about.html"><span>Resources</span></a>
       <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
         <li><a class="dropdown-item" href="free-resources.html">Free</a></li>
-        <li><a class="dropdown-item" href="paid-resources.html">Paid</a></li>
-      </ul>
+        <li><a class="dropdown-item" href="paid-resources.html">Paid</a></li> 
     </li>
-
-    <li><a href="portfolio.html">Feature of AI</a></li>
+    </ul>
+    <li><a href="future.html">Future of AI</a></li>
     <li><a href="pricing.html">Maths at One Place</a></li>
     <li><a href="pricing.html">Events</a></li>
     <li><a href="pricing.html">Social Impact</a></li>
@@ -96,106 +104,134 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Team</h1>
+        <h1 class="mb-2 mb-lg-0">Yoga</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Team</li>
+            <li class="current">Yoga</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Team Section -->
-    <section id="team" class="team section">
+ <section id="yoga-team" class="py-5" style="background-color: #fff7fb;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="color: #ED99BD;">Our Yoga Programs</h2>
+      <p class="text-muted">Explore different styles tailored to your body, mind, and soul</p>
+    </div>
 
-      <div class="container">
+    <div class="row gy-4">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
+      <!-- 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://source.unsplash.com/400x300/?yoga,morning" class="card-img-top" alt="Sunrise Flow">
+          <div class="card-body text-center">
+            <h5 class="card-title" style="color: #ED99BD;">Sunrise Flow</h5>
+            <p class="card-text">Gentle stretches to awaken your body and elevate your energy.</p>
+          </div>
         </div>
-
       </div>
 
-    </section><!-- /Team Section -->
+      <!-- 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://source.unsplash.com/400x300/?yoga,strong" class="card-img-top" alt="Power Core">
+          <div class="card-body text-center">
+            <h5 class="card-title" style="color: #ED99BD;">Power Core</h5>
+            <p class="card-text">Build strength and endurance with a fast-paced, energizing flow.</p>
+          </div>
+        </div>
+      </div>
 
-  </main>
+      <!-- 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://source.unsplash.com/400x300/?yoga,relax" class="card-img-top" alt="Deep Relaxation">
+          <div class="card-body text-center">
+            <h5 class="card-title" style="color: #ED99BD;">Deep Relaxation</h5>
+            <p class="card-text">Unwind with breathwork and calm poses to release deep tension.</p>
+          </div>
+        </div>
+      </div>
 
+      <!-- 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://source.unsplash.com/400x300/?yoga,pregnancy" class="card-img-top" alt="Prenatal Yoga">
+          <div class="card-body text-center">
+            <h5 class="card-title" style="color: #ED99BD;">Prenatal Yoga</h5>
+            <p class="card-text">A gentle and safe journey to prepare your body for motherhood.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://source.unsplash.com/400x300/?yoga,senior" class="card-img-top" alt="Chair Yoga">
+          <div class="card-body text-center">
+            <h5 class="card-title" style="color: #ED99BD;">Chair Yoga</h5>
+            <p class="card-text">A flexible and seated yoga practice accessible for all ages.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://source.unsplash.com/400x300/?yoga,dynamic" class="card-img-top" alt="Ashtanga Yoga">
+          <div class="card-body text-center">
+            <h5 class="card-title" style="color: #ED99BD;">Ashtanga Yoga</h5>
+            <p class="card-text">A structured, athletic style with set sequences and discipline.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://source.unsplash.com/400x300/?yoga,pose" class="card-img-top" alt="Hatha Yoga">
+          <div class="card-body text-center">
+            <h5 class="card-title" style="color: #ED99BD;">Hatha Yoga</h5>
+            <p class="card-text">Master foundational poses and balance with mindful breath.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://source.unsplash.com/400x300/?yoga,stretching" class="card-img-top" alt="Yin Yoga">
+          <div class="card-body text-center">
+            <h5 class="card-title" style="color: #ED99BD;">Yin Yoga</h5>
+            <p class="card-text">Hold postures for longer to release connective tissues deeply.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://source.unsplash.com/400x300/?yoga,flow" class="card-img-top" alt="Vinyasa Flow">
+          <div class="card-body text-center">
+            <h5 class="card-title" style="color: #ED99BD;">Vinyasa Flow</h5>
+            <p class="card-text">Link breath with movement in a dynamic and fluid session.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
   <footer id="footer" class="footer dark-background">
 
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Sailor</span>
+            <span class="sitename">Sattjiva</span>
           </a>
           <div class="footer-contact pt-3">
             <p>A108 Adam Street</p>
@@ -254,7 +290,7 @@
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://bootstrapmade.com/">Sattjiva</a>
       </div>
     </div>
 
