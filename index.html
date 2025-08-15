@@ -2,39 +2,219 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Sattjiva Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-color: #f8f9fa;
-      font-family: 'Segoe UI', sans-serif;
+    :root {
+      --brand: #25D366;
+      --bg: #f8f9fa;
+      --text: #333;
+      --muted: #666;
+      --card: #fff;
     }
 
-    img {
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--bg);
+      font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+      padding-bottom: 120px;
+      /* space for float */
+      color: var(--text);
+    }
+
+    /* Header */
+    .logo {
       max-width: 150px;
       height: auto;
+      margin-top: 20px;
     }
 
     h1 {
-      margin-top: 20px;
+      margin: 16px 12px 0;
       font-size: 1.5rem;
-      color: #333;
       text-align: center;
+      line-height: 1.3;
     }
 
-    marquee {
-      margin-top: 30px;
-      font-size: 1.1rem;
-      color: #2c3e50;
+    .marquee {
+      margin-top: 20px;
       width: 100%;
-      background-color: #e0f7fa;
       padding: 10px 0;
+      background: #e0f7fa;
+      color: #2c3e50;
+      font-size: 1.05rem;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 12s linear infinite;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Info Box */
+    .sattjiva-info-box {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background: var(--card);
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-width: 280px;
+      z-index: 999;
+      animation: slideIn 0.8s ease-out;
+    }
+
+    .sattjiva-info-box h4 {
+      margin: 0 0 6px;
+      font-size: 17px;
+    }
+
+    .sattjiva-info-box p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.45;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Products */
+    .products {
+      width: 100%;
+      max-width: 960px;
+      padding: 24px 16px 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    @media (max-width: 600px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .sattjiva-info-box {
+        max-width: 220px;
+        right: 12px;
+        bottom: 86px;
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .price {
+      font-weight: 700;
+      color: #2c3e50;
+    }
+
+    .btn {
+      display: inline-block;
+      text-align: center;
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      background: var(--brand);
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: transform .2s ease, box-shadow .2s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Floating WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: var(--brand);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .whatsapp-float img {
+      width: 32px;
+      height: 32px;
     }
   </style>
 </head>
@@ -42,16 +222,95 @@
 <body>
 
   <!-- Logo -->
-  <img src="./1741433105977.jpeg" alt="Sattjiva Logo">
+  <img class="logo" src="./1741433105977.jpeg" alt="Sattjiva Logo" />
 
   <!-- Tagline -->
   <h1>Welcome to Sattjiva – Cultivating Inner Peace and Purpose</h1>
 
-  <!-- Marquee Announcement -->
-  <marquee behavior="scroll" direction="left">
-    🚀 We are launching our website soon! Stay tuned with Sattjiva 🌱
-  </marquee>
+  <!-- Announcement (accessible marquee) -->
+  <div class="marquee" aria-label="announcement">
+    <span>🚀 We are launching our website soon! Stay tuned with Sattjiva 🌱 &nbsp;&nbsp;&nbsp; 🚀 We are launching our
+      website soon! Stay tuned with Sattjiva 🌱</span>
+  </div>
 
+  <!-- Products -->
+  <section class="products" aria-label="Sattjiva Products">
+    <!-- Yoga Mat -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?q=80&w=1200&auto=format&fit=crop"
+        alt="Eco-friendly non-slip yoga mat in a calm studio setting" />
+      <div class="card-body">
+        <h3>Premium Yoga Mat</h3>
+        <p class="desc">Eco-friendly, non-slip surface for ultimate comfort during your daily practice.</p>
+        <div class="price">₹1,499</div>
+        <button class="btn" onclick="orderOnWhatsApp({
+            name: 'Premium Yoga Mat',
+            description: 'Eco-friendly, non-slip surface for daily practice.',
+            price: 1499
+          })" aria-label="Order Premium Yoga Mat on WhatsApp">
+          Order on WhatsApp
+        </button>
+      </div>
+    </article>
+
+    <!-- Yoga Block -->
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1605270374511-2e75c9d7e4c6?q=80&w=1200&auto=format&fit=crop"
+        alt="Cork yoga block on a mat ready for practice" />
+      <div class="card-body">
+        <h3>Cork Yoga Block</h3>
+        <p class="desc">Supportive and sturdy cork block—great for alignment and deeper stretches.</p>
+        <div class="price">₹499</div>
+        <button class="btn" onclick="orderOnWhatsApp({
+            name: 'Cork Yoga Block',
+            description: 'Supportive cork block for posture and flexibility.',
+            price: 499
+          })" aria-label="Order Cork Yoga Block on WhatsApp">
+          Order on WhatsApp
+        </button>
+      </div>
+    </article>
+  </section>
+
+  <!-- Info box -->
+  <div class="sattjiva-info-box" role="complementary" aria-label="How Sattjiva Can Assist You">
+    <h4>Discover Inner Harmony</h4>
+    <p>Sattjiva offers rejuvenating yoga, meditation, breathwork, and holistic healing—designed to restore balance and
+      awaken your soul.</p>
+  </div>
+
+  <!-- Floating WhatsApp (generic help) -->
+  <a class="whatsapp-float"
+    href="https://wa.me/919346767185?text=Hi%20Sattjiva%20Team%2C%20I%20have%20a%20question%20about%20your%20wellness%20services%20and%20products."
+    target="_blank" rel="noopener" aria-label="Chat with Sattjiva on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="" />
+  </a>
+
+  <script>
+    // Your WhatsApp number with country code (India = 91)
+    const WHATSAPP_NUMBER = "919346767185"; // 91 + 9346767185
+
+    /**
+     * Opens WhatsApp with a prefilled message that includes
+     * product name, description, and price, plus placeholders
+     * for the customer's name and address.
+     */
+    function orderOnWhatsApp(product) {
+      const msg =
+        `Hello Sattjiva Team, I would like to order:
+
+Product Name: ${product.name}
+Description: ${product.description}
+Price: ₹${product.price}
+
+My Name: [Your Name]
+Delivery Address: [Your Address]
+Preferred Payment: [UPI/COD]`;
+
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+      window.open(url, "_blank", "noopener");
+    }
+  </script>
 </body>
 
 </html>
