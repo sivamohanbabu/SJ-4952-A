@@ -18,9 +18,7 @@
 	<title>Courses</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700" rel="stylesheet">
-	<!--
-			CSS
-			============================================= -->
+	<!-- CSS -->
 	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -33,6 +31,70 @@
 </head>
 
 <body>
+	<!-- Popup Form -->
+	<div id="popupForm" class="popup">
+		<div class="popup-content">
+			<span class="close">&times;</span>
+			<h2>Enroll Now</h2>
+			<form id="enrollForm">
+				<input type="hidden" id="courseName" name="courseName">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+				<label for="phone">Phone:</label>
+				<input type="text" id="phone" name="phone" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				<button type="submit">Send via WhatsApp</button>
+			</form>
+		</div>
+	</div>
+	
+	<style>
+		/* Popup Styles */
+		.popup {
+			display: none;
+			position: fixed;
+			z-index: 1000;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+	
+		.popup-content {
+			background-color: #fff;
+			margin: 10% auto;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 90%;
+			max-width: 400px;
+			border-radius: 5px;
+		}
+	
+		.close {
+			color: #aaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	
+		.popup-content input,
+		.popup-content button {
+			width: 100%;
+			padding: 10px;
+			margin: 5px 0;
+		}
+	
+		.popup-content button {
+			background-color: #25D366;
+			color: white;
+			border: none;
+		}
+	</style>
+
 	<!-- start header Area -->
 	<header id="header">
 		<div class="header-top">
@@ -47,7 +109,7 @@
 						</ul>
 					</div>
 					<div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
-						<a href="tel:sattjiva@gmail.com">
+						<a href="mailto:sattjiva@gmail.com">
 							<span class="text">sattjiva@gmail.com</span>
 						</a>
 						<a class="book-now" href="https://wa.me/9346767185">WhatsApp Enquiry</a>
@@ -82,7 +144,7 @@
 						</li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
-				</nav><!-- #nav-menu-container -->
+				</nav>
 			</div>
 		</div>
 	</header>
@@ -109,112 +171,109 @@
 	<!-- End banner Area -->
 
 	<!-- Start Features Area -->
+	<!-- Start Features Area -->
+	<!-- Start Features Area -->
 	<section class="feature-area courses section-gap">
 		<div class="container">
 			<div class="row d-flex justify-content-center">
 				<div class="col-lg-12">
 					<div class="section-title-wrap text-center">
 						<h1>Our Featured Classes</h1>
-						<p>As you pour the first glass of your favorite Chianti or Chardonnay and settle into an intimate Friday
-							evening.</p>
+						<p>Join our affordable and effective courses. Each program is just <strong>₹499/- for 2 months (per
+								user)</strong>.</p>
 					</div>
 				</div>
 			</div>
 			<div class="row justify-content-center d-flex align-items-center">
+	
+				<!-- Course Card Template -->
 				<div class="col-lg-6 col-md-6 single-feature">
 					<figure>
-						<img class="img-fluid" src="img/featured-class/f1.jpg" alt="">
+						<img class="img-fluid" src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg"
+							alt="Daily Pranayama">
 						<div class="overlay overlay-bg"></div>
 					</figure>
 					<div class="text-center">
-						<h4 class="mb-10">Get into shape now</h4>
-						<p>
-							<a href="#">Book an appointment</a>
+						<h4 class="mb-10">Daily Pranayama Sessions</h4>
+						<p>Start your day with guided breathing exercises for health and focus.<br>Fee: <strong>₹499/- for 2
+								months</strong><br>
+							<a href="#" class="open-form" data-course="Daily Pranayama Sessions">Book via WhatsApp</a>
 						</p>
 					</div>
 				</div>
+	
 				<div class="col-lg-6 col-md-6 single-feature">
 					<figure>
-						<img class="img-fluid" src="img/featured-class/f2.jpg" alt="">
+						<img class="img-fluid" src="https://images.pexels.com/photos/7096/people-woman-coffee-meeting.jpg"
+							alt="Spoken English">
 						<div class="overlay overlay-bg"></div>
 					</figure>
 					<div class="text-center">
-						<h4 class="mb-10">Get into shape now</h4>
-						<p>
-							<a href="#">Book an appointment</a>
+						<h4 class="mb-10">Spoken English with Certification</h4>
+						<p>Improve your English speaking skills and earn certification.<br>Fee: <strong>₹499/- for 2
+								months</strong><br>
+							<a href="#" class="open-form" data-course="Spoken English with Certification">Book via WhatsApp</a>
 						</p>
 					</div>
 				</div>
+	
 				<div class="col-lg-6 col-md-6 single-feature">
 					<figure>
-						<img class="img-fluid" src="img/featured-class/f3.jpg" alt="">
+						<img class="img-fluid" src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
+							alt="Personality Development">
 						<div class="overlay overlay-bg"></div>
 					</figure>
 					<div class="text-center">
-						<h4 class="mb-10">Get into shape now</h4>
-						<p>
-							<a href="#">Book an appointment</a>
+						<h4 class="mb-10">Personality Development Training</h4>
+						<p>Boost your confidence, communication, and leadership skills.<br>Fee: <strong>₹499/- for 2
+								months</strong><br>
+							<a href="#" class="open-form" data-course="Personality Development Training">Book via WhatsApp</a>
 						</p>
 					</div>
 				</div>
-				<div class="col-lg-6 col-md-6 single-feature">
-					<figure>
-						<img class="img-fluid" src="img/featured-class/f4.jpg" alt="">
-						<div class="overlay overlay-bg"></div>
-					</figure>
-					<div class="text-center">
-						<h4 class="mb-10">Get into shape now</h4>
-						<p>
-							<a href="#">Book an appointment</a>
-						</p>
-					</div>
-				</div>
+	
+				<!-- Add 3 more courses as needed, using same structure -->
+				<!-- Example: Python Programming, Data Analytics, Yoga & Well-being -->
+				<!-- ... -->
+	
 			</div>
 		</div>
 	</section>
+	<!-- End Features Area -->
+
+	<!-- End Features Area -->
+
 	<!-- End Features Area -->
 
 	<!-- start footer Area -->
 	<footer class="footer-area section-gap">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3  col-md-6 col-sm-6">
+				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="single-footer-widget">
 						<h4>About Us</h4>
 						<p>
-							The state of Utah in the United States is home to lots of beautiful National Parks, & Bryce Canyon
-							National Park ranks as
-							three of the magnificent & awe inspiring.
+							We provide wellness, communication, and personality development programs to enhance your lifestyle.
 						</p>
 					</div>
 				</div>
-				<div class="col-lg-4  col-md-6 col-sm-6">
+				<div class="col-lg-4 col-md-6 col-sm-6">
 					<div class="single-footer-widget">
 						<h4>Contact Us</h4>
-						<p>
-							56/8, rockybeach road, santa monica, Los angeles, California - 59620.
-						</p>
+						<p>Email: sattjiva@gmail.com</p>
 						<p class="number">
-							012-6532-568-9746 <br> 012-6532-569-9748
+							Call/WhatsApp: 9346767185
 						</p>
 					</div>
 				</div>
-				<div class="col-lg-5  col-md-6 col-sm-6">
+				<div class="col-lg-5 col-md-6 col-sm-6">
 					<div class="single-footer-widget">
 						<h4>Newsletter</h4>
-						<p>You can trust us. we only send offers, not a single spam.</p>
+						<p>Get updates on our latest courses and offers.</p>
 						<div class="d-flex flex-row" id="mc_embed_signup">
-
-							<form class="navbar-form"
-								action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-								method="get">
+							<form class="navbar-form">
 								<div class="input-group add-on align-items-center d-flex">
-									<input class="form-control" name="email" placeholder="Your Email address"
-										onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email address'" required=""
-										type="email">
-									<div style="position: absolute; left: -5000px;">
-										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-									</div>
+									<input class="form-control" name="email" placeholder="Your Email address" type="email" required>
 									<div class="input-group-btn">
 										<button class="genric-btn"><span class="lnr lnr-arrow-right"></span></button>
 									</div>
@@ -227,11 +286,9 @@
 			</div>
 			<div class="footer-bottom row align-items-center">
 				<p class="footer-text m-0 col-lg-6 col-md-12">
-					<!-- Link back to sattjiva can't be removed. Template is licensed under CC BY 3.0. -->
 					Copyright &copy;
-					<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i
+					<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i
 						class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://sattjiva.com" target="_blank">sattjiva</a>
-					<!-- Link back to sattjiva can't be removed. Template is licensed under CC BY 3.0. -->
 				</p>
 				<div class="col-lg-6 col-sm-12 footer-social">
 					<a href="#"><i class="fa fa-facebook"></i></a>
@@ -244,13 +301,10 @@
 	</footer>
 	<!-- End footer Area -->
 
-
+	<!-- Scripts -->
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
 	<script src="js/easing.min.js"></script>
 	<script src="js/hoverIntent.js"></script>
 	<script src="js/superfish.min.js"></script>
@@ -261,6 +315,35 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/mail-script.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+		// Open popup
+		document.querySelectorAll('.open-form').forEach(button => {
+			button.addEventListener('click', function (e) {
+				e.preventDefault();
+				const course = this.getAttribute('data-course');
+				document.getElementById('courseName').value = course;
+				document.getElementById('popupForm').style.display = 'block';
+			});
+		});
+
+		// Close popup
+		document.querySelector('.close').onclick = function () {
+			document.getElementById('popupForm').style.display = 'none';
+		};
+
+		// Submit form and redirect to WhatsApp
+		document.getElementById('enrollForm').addEventListener('submit', function (e) {
+			e.preventDefault();
+			const course = document.getElementById('courseName').value;
+			const name = document.getElementById('name').value;
+			const phone = document.getElementById('phone').value;
+			const email = document.getElementById('email').value;
+			const message = `Hello Sattjiva Team,%0AI am interested in the ${course} course (₹499 for 2 months).%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}`;
+			const whatsappURL = `https://wa.me/9346767185?text=${message}`;
+			window.open(whatsappURL, '_blank');
+		});
+	</script>
+
 </body>
 
 </html>
