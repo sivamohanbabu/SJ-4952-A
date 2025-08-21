@@ -37,25 +37,27 @@
 <div id="membership-popup"
 	style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;justify-content:center;align-items:center;">
 	<div
-		style="background:#fff;width:90%;max-width:900px;border-radius:12px;overflow:hidden;display:flex;flex-wrap:wrap;">
+		style="background:#fff;width:90%;max-width:900px;border-radius:12px;overflow:hidden;display:flex;flex-wrap:wrap;box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+
 		<!-- Left Banner Image -->
 		<div style="flex:1;min-width:300px;">
 			<img src="img/banner-img.png" style="width:100%;height:100%;object-fit:cover;" alt="Sattjiva Banner">
 		</div>
+
 		<!-- Right Form -->
 		<div style="flex:1;min-width:300px;padding:20px;position:relative;">
 			<span id="popup-close" style="position:absolute;top:10px;right:15px;font-size:28px;cursor:pointer;">&times;</span>
 			<h2 style="margin-bottom:20px;">Join the Sattjiva Community</h2>
 			<form id="membership-form">
 				<input type="text" name="name" placeholder="Full Name" required
-					style="width:100%;margin-bottom:10px;padding:8px;">
+					style="width:100%;margin-bottom:10px;padding:10px;">
 				<input type="email" name="email" placeholder="Email" required
-					style="width:100%;margin-bottom:10px;padding:8px;">
+					style="width:100%;margin-bottom:10px;padding:10px;">
 				<input type="text" name="mobile" placeholder="Mobile Number" required
-					style="width:100%;margin-bottom:10px;padding:8px;">
+					style="width:100%;margin-bottom:10px;padding:10px;">
 
 				<!-- Interest Dropdown -->
-				<select name="interest" required style="width:100%;margin-bottom:10px;padding:8px;">
+				<select name="interest" required style="width:100%;margin-bottom:10px;padding:10px;">
 					<option value="">Select Your Interest</option>
 					<option value="Yoga">Yoga</option>
 					<option value="Meditation">Meditation</option>
@@ -66,7 +68,7 @@
 				</select>
 
 				<!-- Place Dropdown (All Indian States) -->
-				<select name="place" required style="width:100%;margin-bottom:10px;padding:8px;">
+				<select name="place" required style="width:100%;margin-bottom:10px;padding:10px;">
 					<option value="">Select Your State</option>
 					<option value="Andhra Pradesh">Andhra Pradesh</option>
 					<option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -107,9 +109,8 @@
 				</select>
 
 				<textarea name="help" placeholder="How can we help you?"
-					style="width:100%;margin-bottom:10px;padding:8px;"></textarea>
+					style="width:100%;margin-bottom:10px;padding:10px;"></textarea>
 
-				<!-- Highlight Button -->
 				<button type="submit" id="submit-btn"
 					style="background:pink;color:#fff;padding:10px 20px;border:none;cursor:pointer;width:100%;">Submit</button>
 			</form>
@@ -152,6 +153,67 @@
 		window.open(whatsappURL, '_blank');
 	};
 </script>
+
+<style>
+	/* Responsive Styles */
+	@media (max-width: 768px) {
+		#membership-popup>div {
+			flex-direction: column;
+			width: 95%;
+			max-width: 400px;
+		}
+
+		#membership-popup img {
+			width: 100%;
+			height: 180px;
+		}
+
+		#membership-popup input,
+		#membership-popup select,
+		#membership-popup textarea,
+		#membership-popup button {
+			font-size: 14px;
+			padding: 8px;
+		}
+
+		#popup-close {
+			font-size: 24px;
+		}
+	}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #membership-popup > div {
+        flex-direction: column;
+        width: 90%;
+        max-width: 360px; /* reduced width */
+    }
+
+    #membership-popup img {
+        width: 100%;
+        height: 140px; /* reduced height */
+    }
+
+    #membership-popup input,
+    #membership-popup select,
+    #membership-popup textarea,
+    #membership-popup button {
+        font-size: 13px; /* smaller font */
+        padding: 6px 8px; /* reduced padding */
+    }
+
+    #popup-close {
+        font-size: 22px; /* smaller close button */
+    }
+
+    #membership-popup h2 {
+        font-size: 18px; /* smaller heading */
+        margin-bottom: 15px;
+    }
+}
+
+
+</style>
 
 	<!-- start header Area -->
 	<header id="header">
@@ -229,95 +291,71 @@
 	<script src="js/mail-script.js"></script>
 	<script src="js/main.js"></script>
 	
-<!-- Sattjiva Chatbot Widget Start -->
-<div id="sattjiva-chatbot" style="position:fixed;bottom:30px;right:30px;z-index:9999;">
-	<button id="chatbot-toggle"
-		style="background:#e83e8c;color:#fff;border:none;border-radius:50%;width:60px;height:60px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:28px;cursor:pointer;">
-		💬
-	</button>
-	<div id="chatbot-window"
-		style="display:none;width:320px;background:#fff;border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,0.25);padding:0 0 12px 0;">
-		<div style="background:#e83e8c;color:#fff;padding:12px 16px;border-radius:12px 12px 0 0;">
-			<strong>Sattjiva Chatbot</strong>
-			<span style="float:right;font-size:18px;cursor:pointer;" id="chatbot-close">&times;</span>
-			<div style="font-size:12px;margin-top:4px;">WhatsApp: <a href="https://wa.me/9346767185" target="_blank"
-					style="color:#fff;text-decoration:underline;">9346767185</a></div>
+	<!-- Sattjiva Chatbot Widget Start -->
+	<div id="sattjiva-chatbot" style="position:fixed;bottom:30px;right:30px;z-index:9999;">
+		<button id="chatbot-toggle"
+			style="background:#e83e8c;color:#fff;border:none;border-radius:50%;width:60px;height:60px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:28px;cursor:pointer;">
+			💬
+		</button>
+		<div id="chatbot-window"
+			style="display:none;width:320px;background:#fff;border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,0.25);padding:0 0 12px 0;">
+			<div style="background:#e83e8c;color:#fff;padding:12px 16px;border-radius:12px 12px 0 0;">
+				<strong>Sattjiva Chatbot</strong>
+				<span style="float:right;font-size:18px;cursor:pointer;" id="chatbot-close">&times;</span>
+				<div style="font-size:12px;margin-top:4px;">WhatsApp: <a href="https://wa.me/9346767185" target="_blank"
+						style="color:#fff;text-decoration:underline;">9346767185</a></div>
+			</div>
+			<div id="chatbot-messages" style="height:180px;overflow-y:auto;padding:10px;font-size:15px;"></div>
+			<form id="chatbot-form" style="display:flex;padding:0 10px;">
+				<input type="text" id="chatbot-input" placeholder="Ask a question..."
+					style="flex:1;border:1px solid #ccc;border-radius:6px;padding:6px 8px;font-size:15px;">
+				<button type="submit"
+					style="background:#e83e8c;color:#fff;border:none;border-radius:6px;padding:6px 12px;margin-left:6px;cursor:pointer;">Send</button>
+			</form>
 		</div>
-		<div id="chatbot-messages" style="height:180px;overflow-y:auto;padding:10px;font-size:15px;"></div>
-		<form id="chatbot-form" style="display:flex;padding:0 10px;">
-			<input type="text" id="chatbot-input" placeholder="Ask a question..."
-				style="flex:1;border:1px solid #ccc;border-radius:6px;padding:6px 8px;font-size:15px;">
-			<button type="submit"
-				style="background:#e83e8c;color:#fff;border:none;border-radius:6px;padding:6px 12px;margin-left:6px;cursor:pointer;">Send</button>
-		</form>
 	</div>
-</div>
+	<script>
+		// FAQ answers
+		const faqAnswers = {
+			"what is sattjiva": "Sattjiva is a Telugu wellness community offering Yoga, Ayurveda, and natural lifestyle guidance.",
+			"how to join": "You can join by clicking 'Become a Member' or contacting us on WhatsApp: 9346767185.",
+			"class timings": "Please see our Weekly Wellness Schedule above for class timings.",
+			"contact": "You can contact us at sattjiva@gmail.com or WhatsApp: 9346767185.",
+			"location": "We are based in Hyderabad, Telangana, India.",
+			"fees": "For fee details, please WhatsApp us at 9346767185.",
+			"family sessions": "Yes, we offer special Family Wellness Sessions for Telugu families."
+		};
 
-<script>
-	// FAQ answers
-	const faqAnswers = {
-		"what is sattjiva": "Sattjiva is a Telugu wellness community offering Yoga, Ayurveda, and natural lifestyle guidance.",
-		"how to join": "You can join by clicking 'Become a Member' or contacting us on WhatsApp: 9346767185.",
-		"class timings": "Please see our Weekly Wellness Schedule above for class timings.",
-		"contact": "You can contact us at sattjiva@gmail.com or WhatsApp: 9346767185.",
-		"location": "We are based in Hyderabad, Telangana, India.",
-		"fees": "For fee details, please WhatsApp us at 9346767185.",
-		"family sessions": "Yes, we offer special Family Wellness Sessions for Telugu families."
-	};
-
-	// Greetings and positive responses
-	const greetings = ["hi", "hello", "good morning", "good afternoon", "good evening", "hey", "namaste"];
-	const positiveReplies = [
-		"Hello! 😊 How can I assist you today?",
-		"Hi there! We're happy to have you here. How can we help?",
-		"Namaste! 🙏 Looking forward to helping you on your wellness journey!",
-		"Hey! 🌟 It's great to see you here. How can I assist?"
-	];
-
-	function getAnswer(q) {
-		q = q.toLowerCase().trim();
-
-		// Check for greetings first
-		for (let greet of greetings) {
-			if (q.includes(greet)) {
-				return positiveReplies[Math.floor(Math.random() * positiveReplies.length)];
+		function getAnswer(q) {
+			q = q.toLowerCase();
+			for (let key in faqAnswers) {
+				if (q.includes(key)) return faqAnswers[key];
 			}
+			return "Sorry, I don't have an answer for that. Please WhatsApp us at 9346767185!";
 		}
 
-		// Check for FAQs
-		for (let key in faqAnswers) {
-			if (q.includes(key)) return faqAnswers[key];
-		}
+		const chatbotToggle = document.getElementById('chatbot-toggle');
+		const chatbotWindow = document.getElementById('chatbot-window');
+		const chatbotClose = document.getElementById('chatbot-close');
+		const chatbotForm = document.getElementById('chatbot-form');
+		const chatbotInput = document.getElementById('chatbot-input');
+		const chatbotMessages = document.getElementById('chatbot-messages');
 
-		// Default response
-		return "Thanks for reaching out! Please WhatsApp us at 9346767185 and we'll get back to you promptly. 😊";
-	}
+		chatbotToggle.onclick = () => chatbotWindow.style.display = 'block';
+		chatbotClose.onclick = () => chatbotWindow.style.display = 'none';
 
-	const chatbotToggle = document.getElementById('chatbot-toggle');
-	const chatbotWindow = document.getElementById('chatbot-window');
-	const chatbotClose = document.getElementById('chatbot-close');
-	const chatbotForm = document.getElementById('chatbot-form');
-	const chatbotInput = document.getElementById('chatbot-input');
-	const chatbotMessages = document.getElementById('chatbot-messages');
-
-	// Toggle chatbot window
-	chatbotToggle.onclick = () => chatbotWindow.style.display = 'block';
-	chatbotClose.onclick = () => chatbotWindow.style.display = 'none';
-
-	// Chatbot form submission
-	chatbotForm.onsubmit = function (e) {
-		e.preventDefault();
-		const userMsg = chatbotInput.value.trim();
-		if (!userMsg) return;
-		chatbotMessages.innerHTML += `<div style="margin-bottom:8px;"><strong>You:</strong> ${userMsg}</div>`;
-		const botReply = getAnswer(userMsg);
-		chatbotMessages.innerHTML += `<div style="margin-bottom:8px;"><strong>Sattjiva:</strong> ${botReply}</div>`;
-		chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-		chatbotInput.value = '';
-	};
-</script>
-<!-- Sattjiva Chatbot Widget End -->
-
+		chatbotForm.onsubmit = function (e) {
+			e.preventDefault();
+			const userMsg = chatbotInput.value.trim();
+			if (!userMsg) return;
+			chatbotMessages.innerHTML += `<div style="margin-bottom:8px;"><strong>You:</strong> ${userMsg}</div>`;
+			const botReply = getAnswer(userMsg);
+			chatbotMessages.innerHTML += `<div style="margin-bottom:8px;"><strong>Sattjiva:</strong> ${botReply}</div>`;
+			chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+			chatbotInput.value = '';
+		};
+	</script>
+	<!-- Sattjiva Chatbot Widget End -->
 
 	<!-- ...existing code... --
 	<!-- End banner Area -->
