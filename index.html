@@ -65,13 +65,13 @@
 					<ul class="nav-menu">
 						<li><a class="active" href="index.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
-						<li><a href="trainers.html">Trainers</a></li>
-						<li class="menu-has-children"><a href="">Careers</a>
+						<li><a href="community.html">Community</a></li>
+						<!-- <li class="menu-has-children"><a href="">Careers</a>
 							<ul>
 								<li><a href="blog-home.html">Blog Home</a></li>
 								<li><a href="blog-single.html">Blog Single</a></li>
 							</ul>
-						</li>
+						</li> -->
 						<li class="menu-has-children"><a href="">Pages</a>
 							<ul>
 								<li><a href="schedule.html">Schedule</a></li>
@@ -90,22 +90,106 @@
 	<!-- end header Area -->
 
 	<!-- start banner Area -->
+	<!-- Banner Section -->
 	<section class="banner-area relative" id="home">
 		<div class="overlay overlay-bg"></div>
 		<div class="container-fluid">
-			<div class="row fullscreen d-flex align-items-center justify-content-between">
-				<div class="col-lg-6 col-md-6 banner-img">
-					<img class="img-fluid" src="img/banner-img.png" alt="">
+			<div class="row d-flex align-items-center justify-content-between fullscreen">
+				<!-- Banner Image -->
+				<div class="col-lg-6 col-md-6 banner-img text-center" data-aos="fade-right" data-aos-duration="1000">
+					<img class="img-fluid w-100" src="img/banner-img.png" alt="Banner Image">
 				</div>
-				<div class="banner-content col-lg-6 col-md-6">
+	
+				<!-- Banner Content -->
+				<div class="col-lg-6 col-md-6 banner-content text-center text-lg-left" data-aos="fade-left"
+					data-aos-duration="1000" data-aos-delay="200">
 					<h1 class="text-uppercase">
-						<span>sattjiva</span> to <br> Nurturing Mind , Body & Soul
+						<span id="rotating-text">Welcome to Sattjiva</span>
 					</h1>
-					<a href="#" class="primary-btn mt-40">Become a Member</a>
+					<p class="mt-3" id="banner-quote">Empowering Mind, Body & Soul</p>
+					<a href="#" class="primary-btn mt-40" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">Become a
+						Member</a>
 				</div>
 			</div>
 		</div>
 	</section>
+	
+	<!-- AOS Library -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+	<script>
+		AOS.init({ once: true });
+	</script>
+	
+	<!-- Text Rotation Script -->
+	<script>
+		const texts = [
+			"Wellness through Yoga & Ayurveda",
+			"Building a Healthy Community",
+			"Empowering Individuals with Passion",
+			"Mind, Body & Soul Harmony",
+			"Sattjiva – Wellness & Values"
+		];
+
+		const quotes = [
+			"Your journey to holistic wellness starts here.",
+			"Together we grow, learn, and achieve.",
+			"Passion fuels skill, skill creates opportunities.",
+			"A healthy mind creates a thriving community.",
+			"Live consciously, lead with compassion."
+		];
+
+		let index = 0;
+
+		function rotateText() {
+			document.getElementById("rotating-text").innerText = texts[index];
+			document.getElementById("banner-quote").innerText = quotes[index];
+			index = (index + 1) % texts.length;
+		}
+
+		// Rotate every 3 seconds
+		setInterval(rotateText, 3000);
+	</script>
+	
+	<!-- Optional Styles -->
+	<style>
+		.banner-area {
+			position: relative;
+			min-height: 80vh;
+			display: flex;
+			align-items: center;
+			background: #f5f5f5;
+		}
+	
+		.banner-content h1 {
+			font-size: 2.5rem;
+			font-weight: 700;
+		}
+	
+		.banner-content p {
+			font-size: 1.2rem;
+			margin-top: 15px;
+			color: #555;
+		}
+	
+		.primary-btn {
+			padding: 12px 30px;
+			font-size: 1rem;
+			border-radius: 50px;
+			text-transform: uppercase;
+		}
+	
+		@media (max-width: 991px) {
+			.banner-content h1 {
+				font-size: 2rem;
+			}
+	
+			.banner-content p {
+				font-size: 1rem;
+			}
+		}
+	</style>
+
 	<!-- ...existing code... -->
 	<script src="js/mail-script.js"></script>
 	<script src="js/main.js"></script>
@@ -640,7 +724,7 @@
 				</div>
 
 				<!-- Newsletter -->
-				<div class="col-lg-5 col-md-6 col-sm-6">
+				<!-- <div class="col-lg-5 col-md-6 col-sm-6">
 					<div class="single-footer-widget">
 						<h4>న్యూస్‌లెటర్</h4>
 						<p>మీ ఇన్‌బాక్స్‌లోకి ఆరోగ్య చిట్కాలు, యోగా గైడ్‌లు, ఆయుర్వేద సలహాలు పంపుతాం. స్పామ్ కాదు!</p>
@@ -661,7 +745,7 @@
 							</form>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 
 			<!-- Bottom Footer -->
@@ -705,39 +789,7 @@
 	<script src="js/mail-script.js"></script>
 	<script src="js/main.js"></script>
 
-	<!-- Maintenance popup — paste just before the closing </body> -->
-	<style>
-  #site-maintenance { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:99999; align-items:center; justify-content:center; }
-  .site-maintenance-dialog { background:#fff; max-width:420px; width:90%; padding:20px; border-radius:8px; text-align:left; box-shadow:0 8px 30px rgba(0,0,0,0.3); position:relative; }
-  .site-maintenance-dialog h2 { margin:0 0 8px; color:#e83e8c; font-size:20px; }
-  .site-maintenance-dialog p { margin:0 0 12px; color:#333; font-size:14px; }
-  .site-maintenance-dialog a { color:#e83e8c; text-decoration:underline; }
-  .site-maintenance-close { position:absolute; right:12px; top:12px; background:#e83e8c; border:none; color:#fff; width:34px; height:34px; border-radius:50%; cursor:pointer; font-size:18px; line-height:1; }
-</style>
 
-<div id="site-maintenance" role="dialog" aria-modal="true" aria-labelledby="maintenance-title">
-  <div class="site-maintenance-dialog" role="document">
-    <button class="site-maintenance-close" aria-label="Close">&times;</button>
-    <h2 id="maintenance-title">Website Under Maintenance</h2>
-    <p>We are currently performing scheduled maintenance. The website will be back shortly.</p>
-    <p>For urgent enquiries please WhatsApp: <a href="https://wa.me/9346767185" target="_blank" rel="noopener">9346767185</a></p>
-  </div>
-</div>
-
-<script>
-(function(){
-  const dialog = document.getElementById('site-maintenance');
-  const closeBtn = document.querySelector('.site-maintenance-close');
-  function show(){ if(dialog) dialog.style.display = 'flex'; }
-  function hide(){ if(dialog) dialog.style.display = 'none'; }
-
-  document.addEventListener('DOMContentLoaded', show);
-  if(closeBtn) closeBtn.addEventListener('click', hide);
-
-  // optional: allow Esc to close
-  document.addEventListener('keydown', (e)=> { if(e.key === 'Escape') hide(); });
-})();
-</script>
 </body>
 
 </html>

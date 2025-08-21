@@ -64,13 +64,13 @@
 					<ul class="nav-menu">
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
-						<li><a href="trainers.html">Trainers</a></li>
-						<li class="menu-has-children"><a href="">Careers</a>
+						<li><a href="community.html">Community</a></li>
+						<!-- <li class="menu-has-children"><a href="">Careers</a>
 							<ul>
 								<li><a href="blog-home.html">Blog Home</a></li>
 								<li><a href="blog-single.html">Blog Single</a></li>
 							</ul>
-						</li>
+						</li> -->
 						<li class="menu-has-children"><a href="">Pages</a>
 							<ul>
 								<li><a href="schedule.html">Schedule</a></li>
@@ -109,72 +109,113 @@
 	<!-- End banner Area -->
 
 	<!-- Start contact-page Area -->
-	<section class="contact-page-area section-gap">
-		<div class="container">
-			<div class="row">
-				<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
-				<div class="col-lg-4 d-flex flex-column address-wrap">
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="lnr lnr-home"></span>
-						</div>
-						<div class="contact-details">
-							<h5>Binghamton, New York</h5>
-							<p>
-								4343 Hinkle Deegan Lake Road
-							</p>
-						</div>
-					</div>
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="lnr lnr-phone-handset"></span>
-						</div>
-						<div class="contact-details">
-							<h5>00 (958) 9865 562</h5>
-							<p>Mon to Fri 9am to 6 pm</p>
-						</div>
-					</div>
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="lnr lnr-envelope"></span>
-						</div>
-						<div class="contact-details">
-							<h5>support@sattjiva.com</h5>
-							<p>Send us your query anytime!</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-8">
-					<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
-						<div class="row">
-							<div class="col-lg-6 form-group">
-								<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required=""
-									type="text">
-
-								<input name="email" placeholder="Enter email address"
-									pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required=""
-									type="email">
-
-								<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Enter subject'" class="common-input mb-20 form-control" required=""
-									type="text">
-							</div>
-							<div class="col-lg-6 form-group">
-								<textarea class="common-textarea form-control" name="message" placeholder="Enter Messege"
-									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
-							</div>
-							<div class="col-lg-12">
-								<div class="alert-msg" style="text-align: left;"></div>
-								<button class="genric-btn primary" style="float: right;">Send Message</button>
-							</div>
-						</div>
-					</form>
+<!-- Start contact-page Area -->
+<section class="contact-page-area section-gap">
+	<div class="container">
+		<div class="row">
+			<!-- Map Section -->
+			<div class="col-lg-12">
+				<div class="map-wrap" style="width:100%; height: 445px;">
+					<iframe
+						src="https://www.google.co.in/maps/embed?pb=!1m18!1m12!1m3!1d3807.220986708571!2d78.420425!3d17.495261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91c9eeae5a15%3A0x61b19478e8423c21!2s61%2C%20Deena%20Bandhu%20Colony%2C%20Paparayadu%20Nagar%2C%20Kukatpally%2C%20Hyderabad%2C%20Telangana%20500072!5e0!3m2!1sen!2sin!4v1692612345678!5m2!1sen!2sin"
+						width="100%" height="445" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 			</div>
+
+			<!-- Contact Details Section -->
+			<div class="col-lg-4 d-flex flex-column address-wrap mt-4">
+				<div class="single-contact-address d-flex flex-row">
+					<div class="icon">
+						<span class="lnr lnr-home"></span>
+					</div>
+					<div class="contact-details">
+						<h5>Address</h5>
+						<p>
+							63-4-35-563/15, Rd Number 1, Ramarao Nagar Colony,<br>
+							Deena Bandhu Colony, Paparayadu Nagar, Kukatpally,<br>
+							Hyderabad, Telangana 500072
+						</p>
+						<a href="https://www.google.co.in/maps/place/61,+Deena+Bandhu+Colony,+Paparayadu+Nagar,+Kukatpally,+Hyderabad,+Telangana+500072/"
+							target="_blank" class="genric-btn small circle primary">View on Google Maps</a>
+					</div>
+				</div>
+
+				<div class="single-contact-address d-flex flex-row mt-3">
+					<div class="icon">
+						<span class="lnr lnr-phone-handset"></span>
+					</div>
+					<div class="contact-details">
+						<h5>Mobile</h5>
+						<p>+91 9346767185</p>
+					</div>
+				</div>
+
+				<div class="single-contact-address d-flex flex-row mt-3">
+					<div class="icon">
+						<span class="lnr lnr-envelope"></span>
+					</div>
+					<div class="contact-details">
+						<h5>Email</h5>
+						<p>sattjiva@gmail.com</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Contact Form Section -->
+		<div class="col-lg-8 mt-4">
+			<form class="form-area contact-form text-right" id="myForm">
+				<div class="row">
+					<div class="col-lg-6 form-group">
+						<input name="name" placeholder="Enter your name" onfocus="this.placeholder=''"
+							onblur="this.placeholder='Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+		
+						<input name="email" placeholder="Enter email address"
+							pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder=''"
+							onblur="this.placeholder='Enter email address'" class="common-input mb-20 form-control" required=""
+							type="email">
+		
+						<input name="subject" placeholder="Enter subject" onfocus="this.placeholder=''"
+							onblur="this.placeholder='Enter subject'" class="common-input mb-20 form-control" required="" type="text">
+					</div>
+					<div class="col-lg-6 form-group">
+						<textarea class="common-textarea form-control" name="message" placeholder="Enter Message"
+							onfocus="this.placeholder=''" onblur="this.placeholder='Enter Message'" required=""></textarea>
+					</div>
+					<div class="col-lg-12">
+						<div class="alert-msg" style="text-align: left;"></div>
+						<button type="submit" class="genric-btn primary" style="float: right;">Send Message</button>
+					</div>
+				</div>
+			</form>
 		</div>
-	</section>
+		
+		<script>
+			document.getElementById('myForm').addEventListener('submit', function (e) {
+				e.preventDefault(); // Prevent form from submitting normally
+
+				// Get form values
+				var name = encodeURIComponent(this.name.value);
+				var email = encodeURIComponent(this.email.value);
+				var subject = encodeURIComponent(this.subject.value);
+				var message = encodeURIComponent(this.message.value);
+
+				// Construct WhatsApp message
+				var text = `Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+
+				// WhatsApp API URL
+				var whatsappURL = `https://wa.me/919346767185?text=${text}`;
+
+				// Open WhatsApp
+				window.open(whatsappURL, '_blank');
+			});
+		</script>
+
+		</div>
+	</div>
+</section>
+<!-- End contact-page Area -->
+
 	<!-- End contact-page Area -->
 
 	<!-- start footer Area -->
@@ -208,7 +249,7 @@
 				</div>
 
 				<!-- Newsletter -->
-				<div class="col-lg-5 col-md-6 col-sm-6">
+				<!-- <div class="col-lg-5 col-md-6 col-sm-6">
 					<div class="single-footer-widget">
 						<h4>న్యూస్‌లెటర్</h4>
 						<p>మీ ఇన్‌బాక్స్‌లోకి ఆరోగ్య చిట్కాలు, యోగా గైడ్‌లు, ఆయుర్వేద సలహాలు పంపుతాం. స్పామ్ కాదు!</p>
@@ -229,7 +270,7 @@
 							</form>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 
 			<!-- Bottom Footer -->
