@@ -453,23 +453,32 @@
 		</div>
 	</div>
 	<script>
-		// FAQ answers
 		const faqAnswers = {
-			"what is sattjiva": "Sattjiva is a Telugu wellness community offering Yoga, Ayurveda, and natural lifestyle guidance.",
-			"how to join": "You can join by clicking 'Become a Member' or contacting us on WhatsApp: 9346767185.",
-			"class timings": "Please see our Weekly Wellness Schedule above for class timings.",
-			"contact": "You can contact us at sattjiva@gmail.com or WhatsApp: 9346767185.",
-			"location": "We are based in Hyderabad, Telangana, India.",
-			"fees": "For fee details, please WhatsApp us at 9346767185.",
-			"family sessions": "Yes, we offer special Family Wellness Sessions for Telugu families."
+			"what is sattjiva": "Sattjiva is a Telugu wellness community offering Yoga, Ayurveda, and natural lifestyle guidance. 🌿",
+			"how to join": "You can join by clicking 'Become a Member' or contacting us on WhatsApp: 9346767185. 📲",
+			"class timings": "Please see our Weekly Wellness Schedule above for class timings. 🕘",
+			"contact": "You can contact us at sattjiva@gmail.com or WhatsApp: 9346767185. ✉️",
+			"location": "We are based in Hyderabad, Telangana, India. 📍",
+			"fees": "For fee details, please WhatsApp us at 9346767185. 💰",
+			"family sessions": "Yes, we offer special Family Wellness Sessions for Telugu families. 👨‍👩‍👧‍👦"
 		};
+
+		const quickReplies = [
+			"What is Sattjiva?",
+			"How to join?",
+			"Class timings",
+			"Contact",
+			"Location",
+			"Fees",
+			"Family sessions"
+		];
 
 		function getAnswer(q) {
 			q = q.toLowerCase();
 			for (let key in faqAnswers) {
-				if (q.includes(key)) return faqAnswers[key];
+				if (q.includes(key.toLowerCase())) return faqAnswers[key];
 			}
-			return "Sorry, I don't have an answer for that. Please WhatsApp us at 9346767185!";
+			return "Sorry, I don't have an answer for that. You can WhatsApp us at 9346767185!";
 		}
 
 		const chatbotToggle = document.getElementById('chatbot-toggle');
@@ -479,20 +488,73 @@
 		const chatbotInput = document.getElementById('chatbot-input');
 		const chatbotMessages = document.getElementById('chatbot-messages');
 
-		chatbotToggle.onclick = () => chatbotWindow.style.display = 'block';
+		chatbotToggle.onclick = () => {
+			chatbotWindow.style.display = 'block';
+			greetUser();
+		};
 		chatbotClose.onclick = () => chatbotWindow.style.display = 'none';
+
+		function greetUser() {
+			const greeting = `Hi there! 👋 I am your Sattjiva assistant. How can I help you today?`;
+			addBotMessage(greeting, true);
+			addQuickReplies();
+		}
+
+		function addBotMessage(msg, showTyping = false) {
+			if (showTyping) {
+				chatbotMessages.innerHTML += `<div style="margin-bottom:8px;"><strong>Sattjiva:</strong> <em>typing...</em></div>`;
+				chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+				setTimeout(() => {
+					chatbotMessages.lastChild.innerHTML = `<strong>Sattjiva:</strong> ${msg}`;
+					chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+				}, 800 + Math.random() * 1200);
+			} else {
+				chatbotMessages.innerHTML += `<div style="margin-bottom:8px;"><strong>Sattjiva:</strong> ${msg}</div>`;
+				chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+			}
+		}
+
+		function addQuickReplies() {
+			const container = document.createElement('div');
+			container.style.margin = "8px 0";
+			quickReplies.forEach(text => {
+				const btn = document.createElement('button');
+				btn.innerText = text;
+				btn.style.margin = "4px 4px 0 0";
+				btn.style.padding = "4px 8px";
+				btn.style.border = "1px solid #e83e8c";
+				btn.style.borderRadius = "6px";
+				btn.style.background = "#fff";
+				btn.style.color = "#e83e8c";
+				btn.style.cursor = "pointer";
+				btn.onclick = () => {
+					chatbotMessages.innerHTML += `<div style="margin-bottom:8px;"><strong>You:</strong> ${text}</div>`;
+					const answer = getAnswer(text);
+					addBotMessage(answer, true);
+					container.remove();
+				};
+				container.appendChild(btn);
+			});
+			chatbotMessages.appendChild(container);
+			chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+		}
 
 		chatbotForm.onsubmit = function (e) {
 			e.preventDefault();
 			const userMsg = chatbotInput.value.trim();
 			if (!userMsg) return;
 			chatbotMessages.innerHTML += `<div style="margin-bottom:8px;"><strong>You:</strong> ${userMsg}</div>`;
-			const botReply = getAnswer(userMsg);
-			chatbotMessages.innerHTML += `<div style="margin-bottom:8px;"><strong>Sattjiva:</strong> ${botReply}</div>`;
-			chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 			chatbotInput.value = '';
+			chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+			const botReply = getAnswer(userMsg);
+			addBotMessage(botReply, true);
+
+			// show quick replies again after answering
+			setTimeout(addQuickReplies, 1500);
 		};
 	</script>
+
 	<!-- Sattjiva Chatbot Widget End -->
 
 	<!-- ...existing code... --
